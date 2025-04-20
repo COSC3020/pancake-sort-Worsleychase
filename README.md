@@ -29,3 +29,12 @@ What is the asymptotic runtime ($\Theta$) of your algorithm in terms of the
 number of comparisons of pancakes? What is it in terms of the number of flips?
 Add your answer to this markdown file.
 
+# Solution
+
+First we'll look at the sub/helper functions used for the sort. First, the getMaxIndex function; this function scans the array once, so its complexitiy is linear $\Theta(n)$. This is called n-1 times, so our total comparisons for the maxIndex is $n+(n-1)+n(-2)+... \implies \Theta(n^2)$. The flip function may be called (worst-case) up to two times per search for the maximum ($2n$). The flip itself also has to linearlly swap every element in the subarray, which means our complexitiy for flips is $\Theta(n^2)$ ($2n*n$). This means our total runtime complexity is $\Theta(n^2)$.
+
+# Disclaimer
+
+I used [this](https://www.sortvisualizer.com/pancakesort/) to help understand the sequence for pancake sort, I find that animations help me a lot.
+
+I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
