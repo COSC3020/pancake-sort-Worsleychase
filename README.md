@@ -33,6 +33,10 @@ Add your answer to this markdown file.
 
 First we'll look at the sub/helper functions used for the sort. First, the getMaxIndex function; this function scans the array once, so its complexitiy is linear $\Theta(n)$. This is called n-1 times, so our total comparisons for the maxIndex is $n+(n-1)+n(-2)+... \implies \Theta(n^2)$. The flip function may be called (worst-case) up to two times per search for the maximum ($2n$). The flip itself also has to linearlly swap every element in the subarray, which means our complexitiy for flips is $\Theta(n^2)$ ($2n*n$). This means our total runtime complexity is $\Theta(n^2)$.
 
+In terms of comparisons: $\Theta(n^2)$ (due to sum of linear operations over subarray sizes)
+
+In terms of flips: $\Theta(n^2)$ (due to potential of two flips per elements + linear number of swaps)
+
 # Disclaimer
 
 I used [this](https://www.sortvisualizer.com/pancakesort/) to help understand the sequence for pancake sort, I find that animations help me a lot.
